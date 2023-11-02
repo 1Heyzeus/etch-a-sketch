@@ -10,14 +10,14 @@
 <body>
     <h1>Etch-A-Sketch!</h1>
     <div class="header">
-        <h6>Choose Grid Size</h6>
-        <button id="select" class="btn btn-danger">Select</button>
+        <button id="select" class="btn btn-danger">Grid Size</button>
+        <p id="message"></p>
     </div>
     <div class="gameGrid"></div>
     <div class="footer">
-        <button id="Black" class="btn btn-dark">Black</button>
-        <button id="Random" class="btn btn-light">Random Colour</button>
-        <button id="Reset" class="btn btn-danger">Reset</button>
+        <button id="Black" class="btn btn-dark" onclick="setColour('black')">Black</button>
+        <button id="Random" class="btn btn-light" onclick="setColour('random')">Random Colour</button>
+        <button id="Reset" class="btn btn-danger" onclick="resetGrid()">Reset</button>
     </div>
 
     <script src="script.js"></script>
