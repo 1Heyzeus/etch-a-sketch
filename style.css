@@ -1,13 +1,29 @@
-#container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    width: 960px;
-    height: 960px;
-    border: 2px solid black;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#container > div {
-    width: auto;
-    height: auto;
-    border: 1px solid black;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.footer{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.gameGrid {
+    width: 500px;
+    height: 500px;
+    display: grid;
+    border: 2px solid black;
 }
