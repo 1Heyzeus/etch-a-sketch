@@ -1,10 +1,18 @@
-const container = document.getElementById('container');
+document.addEventListener("DOMContentLoaded", function(){
+    genGrid(16);
+    console.log('Hi')
+})
 
-function makeDivs(numDivs) {
-for (let d = 0; d < numDivs; d++){
-    let cells = document.createElement('div');
-    container.appendChild(cells)    
-    }
-    }
+function genGrid(size){
+    const grid = document.querySelector('.gameGrid');
+    
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-makeDivs(256);
+    let numDivs = size * size;
+
+    for(let i=0;i<numDivs;i++){
+        let div = document.createElement('div');
+        grid.insertAdjacentElement('beforeend', div);
+    }
+}
