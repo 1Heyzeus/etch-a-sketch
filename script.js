@@ -1,7 +1,20 @@
 let colour = "black"
+let click = false;
 
 document.addEventListener("DOMContentLoaded", function(){
     genGrid(16);
+
+    document.querySelector("body").addEventListener('click', (e) => {
+        if(e.target.tagName != "BUTTON"){
+            click = !click;
+            let draw = document.querySelector('#draw');
+            if(click){
+                draw.textContent = "Click to Stop";
+            } else {
+                draw.textContent = "Click to Draw";
+            }
+        }
+    })
 
     let btn_popup = document.querySelector('#select');
     btn_popup.addEventListener('click', () =>{
@@ -39,11 +52,13 @@ function getSize(){
 }
 
 function colourDiv(){
+   if(click){ 
     if(colour == "random"){
         this.style.backgroundColor = `hsl(${Math.random()*360}, 100%, 50%)`
     } else {
         this.style.backgroundColor = "black";
     }
+  }
 }
 
 function setColour(colourChoice){
