@@ -1,13 +1,13 @@
 #container {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    width: 560px;
-    height: 560px;
+    width: 960px;
+    height: 960px;
     border: 2px solid black;
 }
 
 #container > div {
-    width: 30px;
-    height: 30px;
+    width: auto;
+    height: auto;
     border: 1px solid black;
 }
